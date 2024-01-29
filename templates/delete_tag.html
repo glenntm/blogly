@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block title %} Delete Tag {% endblock %}
+
+{% block content %}
+   <h1>Tag succesfuly deleted!</h1>
+   <a href="{{ url_for('listTags') }}"><button type="button">Back to Tags</button></a>
+    
+{% endblock %}

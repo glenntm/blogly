@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block title %}Submitted Tags{% endblock %}
+
+{% block content %}
+    <h1>Tags</h1>
+    <ul>
+        {% for tag in tags %}
+            <li>
+            <a href="{{ url_for('tagDetail', tag_id=tag.id) }}">{{tag.name}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{url_for('index')}}"><button type="button" class="btn btn-success">Add Tag</button></a>
+    <a href="/"><button type="button" class="btn btn-secondary">Back</button></a>
+{% endblock %}

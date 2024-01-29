@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Create a Tag{% endblock %}</title>
+    <!-- Add your CSS links or styles here -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Add any additional meta tags, scripts, or links to external resources here -->
+</head>
+    
+    {% block content %}
+<body>
+    <!-- Your page content goes here -->
+    <header>
+        <h1>Create a Tag</h1>
+    </header>
+    
+    <main>
+        <form action="{{ url_for('createTag') }}" method="post">
+            <div class="form-group">
+                <label for="tag">Tag:</label>
+                <input type="text" id="tag" name="tag"><br>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Add">
+            <a href="{{ url_for('listTags') }}"><button type="button" class="btn btn-secondary">See Tags</button></a>
+        </form>
+          
+        <!-- Add more sections, articles, divs, etc., as needed for your content -->
+    </main>
+    {% endblock %}
+    <footer>
+        <p>Blogly</p>
+    </footer>
+
+    <!-- Add your JavaScript scripts or links here -->
+    <script src="app.js"></script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-Eb3FSKnaVDL3Av2o6Xjoz6Zc5wZtsfvmS2tdxep5Yq3hGNI2osNt8DAapbLvqAfh" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4Ck5FoN9lGO9IKxR4lOUIwqyq1a4Jw1" crossorigin="anonymous"></script>
+</body>
+
+</html>
